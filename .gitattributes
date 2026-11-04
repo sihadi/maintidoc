@@ -1,0 +1,4 @@
+corpus/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+corpus/**/*.jpg filter=lfs diff=lfs merge=lfs -text
+corpus/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
+corpus/**/*.png filter=lfs diff=lfs merge=lfs -text
