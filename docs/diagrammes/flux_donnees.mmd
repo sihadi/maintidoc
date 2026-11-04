@@ -1,0 +1,12 @@
+flowchart TB
+  SRC[PDF ou image] --> OCR[Extraction / OCR]
+  OCR --> META[Découpage + métadonnées]
+  META --> EMB[Embeddings]
+  EMB --> STORE[(Stockage + index)]
+  Q[Question + photo] --> AUTH[Authentification + droits]
+  AUTH --> SEARCH[Recherche autorisée]
+  STORE --> SEARCH
+  SEARCH --> ANSWER[Réponse et citations]
+  ANSWER --> DRAFT[Brouillon ticket]
+  DRAFT --> HUMAN[Validation humaine]
+  HUMAN -->|validé| MCP[create_ticket]

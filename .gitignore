@@ -1,0 +1,29 @@
+# Secrets et configuration locale
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Éditeurs et système
+.vscode/*
+!.vscode/settings.example.json
+.idea/
+Thumbs.db
+.DS_Store
+
+# Archives et artefacts générés
+*.zip
+*.7z
+*.tar
+*.tar.gz
+dist/
+build/

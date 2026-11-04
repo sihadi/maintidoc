@@ -1,0 +1,17 @@
+flowchart LR
+  U[Utilisateur] --> UI[Interface]
+  UI --> API[API + authentification]
+  API --> ACL{Groupe autorisé ?}
+  ACL -->|oui| ORCH[Orchestration]
+  ACL -->|non| REFUS[Refus]
+  ORCH --> VLM[Vision-langage]
+  ORCH --> RAG[RAG texte + image]
+  RAG --> INDEX[(Index documentaire)]
+  ORCH --> MCP[MCP historique/ticket]
+  VLM --> CHECK[Vérification citations]
+  RAG --> CHECK
+  MCP --> CHECK
+  CHECK --> REP[Réponse sourcée ou clarification]
+  REP --> APPROB{Approbation humaine ?}
+  APPROB -->|oui| TICKET[Création ticket MCP]
+  APPROB -->|non| UI
